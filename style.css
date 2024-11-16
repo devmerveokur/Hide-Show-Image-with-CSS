@@ -1,0 +1,27 @@
+body{
+    background-color: black;
+    margin-top: 70px;
+}
+
+img{
+    width: 50vw;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+.yazi::before{
+    content: attr(data-hide);
+}
+.yazi:hover{
+    color: rgb(234, 100, 42);
+}
+.checkbox:checked + .yazi::before{
+    content: attr(data-show);
+}
+.checkbox:checked + .yazi +img{
+    display: none;
+}
